@@ -1,0 +1,105 @@
+<div class="sub-tuition">
+			
+    <h3>빠른수강료조회</h3>
+
+<form name="quickForm" method="post">
+    <input type="hidden" name="mater" value="아카데미소개_빠른수강료조회">
+    <input type="hidden" name="interest" value="[] 아카데미소개">
+    <div id="Div_Cousrse" style="display:none;"></div>
+    <div class="csForm">
+    <h5>교육 희망지점을 선택해 주세요.</h5>
+        
+<ul id="locaList" class="local-select"><li><input id="location0" title="location0" data-placeseq="19" name="location" type="radio" value="요리(강남)" class="chkBox" checked=""><label for="location0" title="location0">강남</label></li><li><input id="location1" title="location1" data-placeseq="33" name="location" type="radio" class="chkBox" value="요리(홍대)"><label for="location1" title="location1">홍대</label></li><li><input id="location2" title="location2" data-placeseq="37" name="location" type="radio" class="chkBox" value="요리(부산)"><label for="location2" title="location2">부산</label></li><li><input id="location3" title="location3" data-placeseq="36" name="location" type="radio" class="chkBox" value="요리(대구)"><label for="location3" title="location3">대구</label></li><li><input id="location4" title="location4" data-placeseq="41" name="location" type="radio" class="chkBox" value="요리(대전)"><label for="location4" title="location4">대전</label></li><li><input id="location5" title="location5" data-placeseq="46" name="location" type="radio" class="chkBox" value="요리(인천)"><label for="location5" title="location5">인천</label></li><li><input id="location6" title="location6" data-placeseq="66" name="location" type="radio" class="chkBox" value="요리(안산)"><label for="location6" title="location6">안산</label></li></ul>
+
+
+<script language="javascript">
+$('#locaList').empty();
+var cur_place = '19';
+if ( 'korea-coffeebaking.com' =="kcookart.com" || 'korea-coffeebaking.com' =="kcook-chefedu.com" || 'korea-coffeebaking.com' =="gn.kcookart.com" || 'korea-coffeebaking.com' =="koreacookaca.co.kr"){
+cur_place = 0;
+}
+
+//지점정보
+var Arr_Place =  [ ["요리(강남)",19,"강남"],["요리(홍대)",33,"홍대"],["요리(부산)",37,"부산"],["요리(대구)",36,"대구"],["요리(대전)",41,"대전"] ,["요리(인천)",46,"인천"],["요리(안산)",66,"안산"] ];
+
+//접속이 첫번째
+for(var i in Arr_Place){
+if (cur_place==Arr_Place[i][1]){
+$('#locaList').append( '<li><input id="location'+i+'" title="location'+i+'" data-placeseq="'+Arr_Place[i][1]+'" name="location" type="radio" value="'+Arr_Place[i][0]+'" class="chkBox" checked/><label for="location'+i+'" title="location'+i+'">'+Arr_Place[i][2]+'</label></li>' );
+}
+}
+//떨거지
+for(var i in Arr_Place){
+if (cur_place !=Arr_Place[i][1]){
+$('#locaList').append( '<li><input id="location'+i+'" title="location'+i+'" data-placeseq="'+Arr_Place[i][1]+'" name="location" type="radio" class="chkBox" value="'+Arr_Place[i][0]+'" /><label for="location'+i+'" title="location'+i+'">'+Arr_Place[i][2]+'</label></li>' );
+}
+}
+</script>
+
+    </div>
+    
+    <div class="csForm">
+        <h5>관심있는 과정을 선택해주세요.</h5>
+        
+
+<div class="tuitionList">
+<ul class="csInt">
+
+<li><input type="checkbox" name="cookChk" onclick="interest_add(this);" id="int0101" value="원데이클래스(취미/스킬업)"><label for="int0101">원데이클래스(취미/스킬업)</label></li>
+<li><input type="checkbox" name="cookChk" onclick="interest_add(this);" id="int0103" value="바리스타/자격증"><label for="int0103">바리스타/자격증</label></li>
+<li><input type="checkbox" name="cookChk" onclick="interest_add(this);" id="int0104" value="제과제빵/자격증"><label for="int0104">제과제빵/자격증</label></li>
+<li><input type="checkbox" name="cookChk" onclick="interest_add(this);" id="int0105" value="입시/진학과정"><label for="int0105">입시/진학과정</label></li>
+<li><input type="checkbox" name="cookChk" onclick="interest_add(this);" id="int0106" value="창업/메뉴개발"><label for="int0106">창업/메뉴개발</label></li>
+<li><input type="checkbox" name="cookChk" onclick="interest_add(this);" id="int0107" value="심화/고급과정"><label for="int0107">심화/고급과정</label></li>
+<li><input type="checkbox" name="cookChk" onclick="interest_add(this);" id="int0108" value="취업/전문가과정"><label for="int0108">취업/전문가과정</label></li>
+<li><input type="checkbox" name="cookChk" onclick="interest_add(this);" id="int0110" value="단체레슨"><label for="int0110">단체레슨</label><input name="content" type="text" placeholder="참여인원을 입력해 주세요."></li>
+<li><input type="checkbox" name="cookChk" onclick="interest_add(this);" id="int0111" value="창의적체험활동(CA)"><label for="int0111">창의적체험활동(CA)<span>고등학교, 중학교</span></label></li>
+<li><input type="checkbox" name="cookChk" onclick="interest_add(this);" id="int0109" value="기타문의"><label for="int0109">기타문의</label></li>
+
+
+</ul>
+</div>
+
+
+    </div>
+    
+    <div class="quick-info-wr">
+        <dl class="sbtIpt pt0">
+            <dt>신청하시는 분의 이름과 연락처를 입력해 주세요.</dt>
+            <dd><input type="text" name="name" id="name" value="" placeholder="이름을 입력해 주세요."></dd>
+            <dd>
+                <ul class="csTel">
+                    <li>
+                        <select name="handphone1">
+                            <option selected="" value="">선택</option>
+                            <option value="010" selected="">010</option>
+                            <option value="011">011</option>
+                            <option value="016">016</option>
+                            <option value="017">017</option>
+                            <option value="018">018</option>
+                            <option value="019">019</option>
+                        </select>
+                    </li>
+                    <li>-</li>
+                    <li><input name="handphone2" type="tel" title="휴대폰 앞 번호" class="onlyNum" maxlength="4"></li>
+                    <li>-</li>
+                    <li><input name="handphone3" type="tel" title="휴대폰 앞 번호" class="onlyNum" maxlength="4"></li>
+                </ul>
+            </dd>	
+        </dl>
+        
+        <div class="sbtBtn">
+        
+            <a href="javascript:quickSend();" class="hvrBtn"><em></em><span>수강료 조회하기</span></a>
+        
+        </div><!-- sbtBtn -->		
+
+        <div class="csAgree">
+            <input type="checkbox" name="chkAgree" id="w_check" value="1" class="chkBox">
+            <label for="w_check"><a href="#ex1" rel="modal:open"><u>개인정보처리방침</u></a>에 동의</label>
+        </div><!-- sbtAgree -->
+    </div>
+        
+
+</form>
+</div>

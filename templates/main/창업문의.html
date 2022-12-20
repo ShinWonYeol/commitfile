@@ -1,0 +1,166 @@
+<table>
+    <tbody><tr>
+       <td>
+          <table cellpadding="5" cellspacing="0" width="100%" style="line-height:42px;">
+             <tbody><tr><td height="2" colspan="4"></td></tr>
+             <tr bgcolor="#f5f5f5">
+                <td style="height:45px; width:180px;" align="center"><b>성명</b></td>
+                <td width="190"><label for="name"></label><input type="text" id="name" style="width:180px; height:33px; border:1px solid #cdcdcd;" name="txtName" validate="null,성명"></td>
+                <td style="height:45px; width:180px;" align="center"><b>연락처</b></td>
+                <td width="190"><label for="slctTel1"></label>
+                      <select id="slctTel1" name="slctTel1" style="width:60px; height:43px;">
+                      <option value="010" selected="">010</option>
+                      <option value="011">011</option>
+                      <option value="016">016</option>
+                      <option value="017">017</option>
+                      <option value="018">018</option>
+                      <option value="019">019</option>
+                      </select>
+                    - <label for="txtTel2"></label><input type="text" id="txtTel2" style="width:51px; height:29px; border:1px solid #cdcdcd;" class="input_e" maxlength="4" onkeypress="return onlyKeyNumber(event);" oninput="fn_press_han(this);" name="txtTel2" validate="null,핸드폰 번호">
+                    - <label for="txtTel3"></label><input type="text" id="txtTel3" style="width:51px; height:29px; border:1px solid #cdcdcd;" class="input_e" onkeypress="return onlyKeyNumber(event);" oninput="fn_press_han(this);" name="txtTel3" maxlength="4" validate="null,핸드폰 번호">
+                </td>
+
+             </tr>
+             <tr><td height="1" colspan="4"></td></tr>
+             <!-- <tr bgcolor=''>
+                <td style='height:45px; width:180px;' align='center'><b>상담가능시간</b></td>
+                <td width="190">
+                   <select name='chkTime' id='chkTime' style=" width:180px; height:36px;">
+                      <option value=''>선택하세요</option>
+                      <option value='17'>항상가능</option>
+                      <option value='9'>9시~10시</option>
+                      <option value='10'>10시~11시</option>
+                      <option value='11'>11시~12시 </option>
+                      <option value='13'>13시~14시</option>
+                      <option value='14'>14시~15시</option>
+                      <option value='15'>15시~16시</option>
+                      <option value='16'>16시~17시</option>
+                   </select>
+                </td>
+                <td style='height:45px; width:180px;' align='center'><b>지역</b></td>
+                <td width="*" >
+                   <select name='txtAddr1' style=" width:180px; height:36px;">
+                      <option value=''>선택하세요</option>
+                      <option value='서울특별시'>서울특별시</option>
+                      <option value='부산광역시'>부산광역시</option>
+                      <option value='대구광역시'>대구광역시</option>
+                      <option value='인천광역시'>인천광역시</option>
+                      <option value='광주광역시'>광주광역시</option>
+                      <option value='대전광역시'>대전광역시</option>
+                      <option value='울산광역시'>울산광역시</option>
+                      <option value='세종특별자치시'>세종특별자치시</option>
+                      <option value='강원도'>강원도</option>
+                      <option value='경기도'>경기도</option>
+                      <option value='경상남도'>경상남도</option>
+                      <option value='경상북도'>경상북도</option>
+                      <option value='전라남도'>전라남도</option>
+                      <option value='전라북도'>전라북도</option>
+                      <option value='충청남도'>충청남도</option>
+                      <option value='충청북도'>충청북도</option>
+                   </select>
+                </td>
+             </tr> -->
+             <tr><td height="1" colspan="4"></td></tr>
+             <tr>
+                <!-- <td style='height:45px; width:180px;' align='center'><b>최종학력</b></td>
+                <td width="190">
+                   <select name='grade' id='grade' style=" width:180px; height:36px;">
+                      <option value=''>선택하세요</option>
+                      <option value='고등학교 졸업'>고등학교 졸업</option>
+                      <option value='전문대 재학'>전문대 재학 </option>
+                      <option value='전문대 중퇴'>전문대 중퇴</option>
+                      <option value='전문대 졸업'>전문대 졸업</option>
+                      <option value='대학교 재학'>대학교 재학</option>
+                      <option value='대학교 중퇴'>대학교 중퇴</option>
+                      <option value='대학교 졸업'>대학교 졸업</option>
+                      <option value='대학원 재학'>대학원 재학</option>
+                      <option value='대학원 졸업'>대학원 졸업</option>
+                      <option value='기타'>기타</option>
+                   </select>
+                </td> -->
+                <td style="height:45px; width:180px;" align="center"><b>상담희망과정</b></td>
+                <td colspan="3">
+                   <input type="radio" id="license" name="license" value="사회복지사" checked="">
+                   <label for="license">사회복지사</label>&nbsp;
+
+                   <!-- <input type="radio" id="license" name="license" value="보육교사">
+                   <label for="license ">보육교사</label>   &nbsp; -->
+
+                   <input type="radio" id="license" name="license" value="평생교육사">
+                   <label for="license">평생교육사</label>&nbsp;
+
+                   <!-- <input type="radio" id="license" name="license" value="장애영유아보육교사">
+                   <label for="license ">장애영유아보육교사</label>      &nbsp; -->
+
+                   <!-- <input type="radio" id="license" name="license" value="건강가정사">
+                   <label for="license ">건강가정사</label>   &nbsp;</br> -->
+                   <input type="radio" id="license" name="license" value="학위취득">
+                   <label for="license ">학위취득</label>      &nbsp;
+
+                   <!--input type="radio" id="license" name="license" value="심리학">
+                   <label for="license ">심리학</label>&nbsp; -->
+
+                   <!-- <input type="radio" id="license" name="license" value="경영학">
+                   <label for="license ">경영학</label>&nbsp; -->
+
+                   <input type="radio" id="license" name="license" value="컴퓨터공학">
+                   <label for="license ">컴퓨터공학</label>&nbsp;
+
+                   <input type="radio" id="license" name="license" value="독학사">
+                   <label for="license ">독학사</label>&nbsp;
+                </td>
+
+             </tr>
+             <!-- <tr>
+                <td style='height:45px; width:180px;' align='center'><b>상담희망과정</b></td>
+                <td width="190">
+                   <select name="license" style="width:180px; height:36px;">
+                      <option value='사회복지사'>사회복지사</option>
+                      <option value='보육교사'>보육교사</option>
+                      <option value='장애영유아보육교사'>장애영유아보육교사</option>
+                      <option value='평생교육사'>평생교육사</option>
+                      <option value='건강가정사'>건강가정사</option>
+                      <option value='전문학사/학사학위'>전문학사/학사학위</option>
+                      <option value='기타'>기타</option>
+                   </select>
+                </td>
+             </tr> -->
+
+             <!-- <tr bgcolor="f5f5f5">
+                <td style="height:45px; width:180px;" align="center"><b>상담유형</b></td>
+                <td colspan="3">
+
+                   <input type="radio" id="grade" name="grade" value="수강료문의" checked="">
+                   <label for="grade">수강료문의</label>&nbsp;
+
+                   <input type="radio" id="grade" name="grade" value="학습문의">
+                   <label for="grade">학습문의</label>&nbsp;
+
+                   <input type="radio" id="grade" name="grade" value="학습설계">
+                   <label for="grade ">학습설계</label>&nbsp;
+
+                   <input type="radio" id="grade" name="grade" value="기타">
+                   <label for="grade ">기타</label>&nbsp;
+                </td>
+
+             </tr> -->
+             <tr><td height="1" colspan="4"></td></tr>
+             <tr  bgcolor="f5f5f5">
+                <td style="height:165px; width:180px;" align="center"><b>궁금하신 내용을<br>적어주세요</b></td>
+                <td width="190" colspan="3">
+                   <label class="hid" for="text_consult"></label><textarea name="consult" id="text_consult" rows="10" cols="80"></textarea>
+                </td>
+             </tr>
+
+          </tbody></table>
+
+          <div class="go_mes">
+             <div class="policy_mes">
+                <a onclick="window.open(&quot;/rtInclude/inc/policy_counsel_5.html&quot;, &quot;window&quot;, &quot;width=600,height=350, scrollbars=yes&quot;);"> 개인정보 처리방침 내용보기</a>
+                <input type="checkbox" name="chkAgree" id="chkAgree" onfocus="this.blur()" onclick="JavaScript:document.all.chkAgree.checked=false;pop();" value="1" class="">
+                <label for="chkAgree"><strong style="font-size:14px; color:#000;">동의 합니다.</strong></label>&nbsp;
+                <input type="checkbox" name="chkAgree2" id="chkAgree2" onfocus="this.blur()" value="1" onclick="JavaScript:document.all.chkAgree2.checked=false;pop_MKting();">
+                <label for='chkAgree2' class="chkAgree2" ><strong style="font-size:14px; color:#000;">마케팅 수신 정보를 확인했습니다.</strong></label>
+             </div>
+
+          </div>
